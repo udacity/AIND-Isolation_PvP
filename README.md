@@ -12,7 +12,7 @@ Modified Isolation library and scripts to run a PvP Isolation competition for th
         competition_agent.py  # default agent for balance  
         agents/  # player agents go here  
             agent1/  
-            competition_agent.py    
+                competition_agent.py    
             agent2/  
                 competition_agent.py  
             ...  
