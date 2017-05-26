@@ -7,18 +7,18 @@ Modified Isolation library and scripts to run a PvP Isolation competition for th
 - Clone this repository
 - Put a copy of a default "competition_agent.py" implementation in the base directory (this file is used to "balance" tournaments with an odd number of agents)
 - Put all competing agents in their own directories within a target folder. For example:
-
-    AIND-Isolation_PvP/
-        competition_agent.py  # default agent for balance
-        agents/  # player agents go here
-            agent1/
+```
+    AIND-Isolation_PvP/  
+        competition_agent.py  # default agent for balance  
+        agents/  # player agents go here  
+            agent1/  
+            competition_agent.py    
+            agent2/  
                 competition_agent.py  
-            agent2/
+            ...  
+            agentN/  
                 competition_agent.py
-            ...
-            agentN/
-                competition_agent.py
-
+```
 
 # Usage
 

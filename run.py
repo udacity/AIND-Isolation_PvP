@@ -614,12 +614,12 @@ if __name__ == '__main__':
         description="")
     parser.add_argument(
         "-i", "--input", default=os.getcwd(),
-        help="Name of the input folder containing agent folders")
+        help="Name of the input folder containing agent folders", dest='directory')
     parser.add_argument(
         "-p", "--processes", type=int, default=2,
         help="Number of processes to use for running matches")
     parser.add_argument(
-        "-d", "--database", action="store_true", default="tournament.db",
+        "-d", "--database", action="store", default="tournament.db",
         help="Name to use for sqlite database of results " +
              "(ignored if -t is used)")
     parser.add_argument(
@@ -645,7 +645,7 @@ if __name__ == '__main__':
         load_agents(db_conn, args.directory)
 
     curr = db_conn.cursor()
-    curr.execute("SELECT Count(*) FROM agents")
+    curr.execute("SELECT count(*) FROM agents")
     num_agents = curr.fetchone()[0]
     if not num_agents:
         logger.error((
